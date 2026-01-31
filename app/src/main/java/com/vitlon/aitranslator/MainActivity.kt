@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     // --- 3. KIỂM TRA CẬP NHẬT (GIỮ NGUYÊN TỪ CŨ) ---
     private fun checkAppUpdate() {
         // 👇 LƯU Ý: Đổi đường dẫn này sang Repo mới của App Translator nhé!
-        val configUrl = "https://raw.githubusercontent.com/USERNAME/REPO_MOI_CUA_BAN/main/version.json"
+        val configUrl = "https://raw.githubusercontent.com/VitLon142/aitranslator/refs/heads/master/app/version_wiki.json"
 
         CoroutineScope(Dispatchers.IO).launch {
             try {
