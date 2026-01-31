@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scanner_root"
+    android:layout_width="300dp"
+    android:layout_height="180dp"
+    android:padding="20dp">
+    <View
+        android:id="@+id/visual_border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_scanner_border" />
+
+    <View
+        android:id="@+id/view_content_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#11FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/btn_scan_action"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@drawable/bg_button_pill"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="6dp"
+            android:src="@android:drawable/ic_menu_camera"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUÉT"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_close_scanner"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/bg_circle_red"
+        android:contentDescription="Đóng"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ImageView
+        android:id="@+id/btn_lock_scanner"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_lock_lock"
+        android:background="@drawable/bg_circle_red"
+        android:backgroundTint="#FFCC00"
+        android:padding="8dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="Khóa vị trí"
+        app:tint="#FFFFFF"/>
+
+    <ImageView
+        android:id="@+id/btn_resize_handle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:background="#44000000"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_crop"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/btn_move_handle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|start"
+        android:background="#44000000"
+        android:contentDescription="Giữ để di chuyển"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_mylocation"
+        app:tint="#FFFFFF" />
+
+</FrameLayout>

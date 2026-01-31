@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_panel_rounded"
+    android:id="@+id/root_translator">
+
+    <LinearLayout
+        android:id="@+id/layout_header_drag"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#DD000000"
+        android:paddingHorizontal="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AI Translator"
+            android:textColor="#FFD700"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/btn_settings"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"/>
+
+        <ImageView
+            android:id="@+id/btn_clear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"/>
+
+        <ImageView
+            android:id="@+id/btn_minimize"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_header_drag"
+        android:layout_above="@id/layout_footer"
+        android:padding="8dp"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bấm icon Camera để quét..."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"/>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="#AA000000">
+
+        <TextView
+            android:id="@+id/btn_quick_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="QUÉT LẠI"
+            android:textColor="#00FF00"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"/>
+
+        <ImageView
+            android:id="@+id/btn_resize_window"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/ic_menu_crop"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:rotation="90"
+            android:background="#55FFFFFF"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_settings_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_header_drag"
+        android:orientation="vertical"
+        android:background="#EE222222"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView android:text="Nhập API Key Groq:" android:textColor="#FFF" android:textSize="10sp" android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_api_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:hint="gsk_..."/>
+        <Button android:id="@+id/btn_save_key" android:layout_width="wrap_content" android:layout_height="36dp" android:text="Lưu &amp; Đóng" android:layout_gravity="end"/>
+    </LinearLayout>
+
+</RelativeLayout>
